@@ -1,0 +1,24 @@
+<html>
+     <head>
+          <title>SNP crawler</title>
+     </head>
+	 <h1> Pileup for mutation : {{k}} @ {{pos}}</h1>
+     <body>
+		  <table style="border: 1px solid #F90;">
+		  <tbody>
+		  {% for s,p in mut%}
+		    <tr>
+          	 <td>{{s}}</td> 
+			 <td><a href="{{p[7]}}">View</a></td> 
+			 <td>{{p[0]}}</td> 
+			 <td>{{p[1]}}</td> 
+			 <td>{{p[2]}}<td> 
+			 <td>{{p[3]}}<td> 
+			 <td>{{p[4]}}<td> 
+			 <td><tt>{{p[5]}}</tt></td>
+			</tr>
+          {% endfor %}
+		  </tbody>
+		  </table>
+     </body>
+</html>

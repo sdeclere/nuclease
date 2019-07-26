@@ -1,0 +1,12 @@
+<html>
+     <head>
+          <title>SNP crawler</title>
+     </head>
+     <body>
+          <h1>Hello !</h1>
+		  <ol>{% for m in muts%}
+          	<li>  <a href="{{ url_for('view_mutation', k=m[0], pos=m[1]) }}">{{m[0] + '@' +m[1]}}</a> 
+          {% endfor %}
+	  </ol>
+     </body>
+</html>
